@@ -1,7 +1,7 @@
 import './Post.css';
 
 const Post = (props) => {
-  const { title, url, date, content, thumbnail } = props;
+  const { title, url, date, content } = props;
   return (
     <div className='post'>
       <a className='post__title_area' href={url}>
