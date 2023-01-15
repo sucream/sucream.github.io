@@ -1,17 +1,20 @@
 import './Post.css';
 
 const Post = (props) => {
-  const { title, url, date, content } = props;
+  const { title, content, date, url, thumbnail } = props;
   return (
-    <div className='post'>
-      <a className='post__title_area' href={url}>
-        <div>{title}</div>
-      </a>
-      <div className='post__content_area'>
+    <a className='post' href={url}>
+      <img
+        className='post__thumbnail'
+        src={thumbnail || process.env.PUBLIC_URL + '/img/sucream.png'}
+        alt='썸네일 이미지'
+      />
+      <div className='post__content-area'>
+        <div className='post__title'>{title}</div>
         <div className='post__date'>{date}</div>
         <div className='post__content'>{content}</div>
       </div>
-    </div>
+    </a>
   );
 };
 

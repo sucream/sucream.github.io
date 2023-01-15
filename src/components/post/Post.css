@@ -1,14 +1,13 @@
 .post {
   /* margin: 0 auto; */
   margin: 10px;
-  min-width: 300px;
-  min-height: 250px;
+  width: 300px;
+  height: 220px;
   background-color: #ccc;
-  /* padding: 5px; */
-  border: 1px solid #ccc;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .post:hover {
@@ -17,45 +16,37 @@
   transform: scale(1.05);
 }
 
-.post__title_area {
-  /* height: 60%; */
-  flex: 3;
-  position: relative;
-  background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtWCS%2FbtrGQvku5Wp%2FT15xQmCoNI4KTZoMCizhOk%2Fimg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.post__thumbnail {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.post__content-area {
+  /* border: 1px solid black; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* opacity: 0.5; */
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 100%; */
 }
 
-.post__title_area::before {
-  content: '';
-  opacity: 0.5;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-color: #000;
-}
-
-.post__title_area > div {
-  font-size: 1.5rem;
-  color: #fff;
-  /* text-align: center; */
-  position: relative;
-}
-
-.post__content_area {
-  flex: 1;
-  padding: 10px;
+.post__title {
+  font-size: 1rem;
+  font-weight: bold;
+  /* position: relative; */
 }
 
 .post__date {
   text-align: end;
   font-size: 0.8rem;
   color: black;
+}
+
+.post__content {
+  /* height: ; */
+  /* border: 1px solid black; */
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
 }
